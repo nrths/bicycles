@@ -1,0 +1,9 @@
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts.css");
+
+@import "./modules/variables.scss"; /* сначала переменные, функции, миксины, потом блоки, элементы, модификаторы*/
+@import "./modules/mixins.scss";
+@import "./modules/blocks/page/page.scss";
+@import "./modules/blocks/list/list.scss";
+@import "./modules/blocks/link/link.scss";
+@import "./modules/blocks/header/header.scss";

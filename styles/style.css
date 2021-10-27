@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url("./vendor/normalize.css");
+@import url("./vendor/fonts.css");
+/* сначала переменные, функции, миксины, потом блоки, элементы, модификаторы*/
+.page {
+  background-color: #F4F4F4;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.header__container {
+  padding: 28px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.header__menu-button {
+  display: none;
+}
+.header__menu {
+  display: block;
+}
+.header__menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.header__menu-item {
+  margin-right: 34px;
+}
+.header__mennu-item:last-of-type {
+  margin-right: 0;
+}
+.header__link {
+  text-align: right;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  color: #151515;
+  font-weight: 500;
+  line-height: 18px;
+}
+.header__link:hover {
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */

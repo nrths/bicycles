@@ -1,0 +1,43 @@
+@use "sass:map";
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    &__container {
+        padding: 28px 0;
+        @include flex(row, flex-end, flex-start);
+    }
+
+    &__menu-button {
+        display: none;
+    }
+
+    &__menu {
+        display: block;
+    }
+
+    &__menu-list {
+        @include flex(row, flex-start, stretch)
+    }
+
+    &__menu-item {
+        margin-right: 34px;
+    }
+
+    &__mennu-item:last-of-type {
+        margin-right: 0;
+    }
+
+    &__link {
+        text-align: right;
+        @include fontAttributes('Inter', 14px, $baseTextColor, 500, 18px)
+    }
+
+    &__link:hover {
+        opacity: .6;
+    }
+}

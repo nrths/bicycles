@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="north">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/logo-png.png">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__container container container_s_medium">
+            <button class="header__menu-button button" type="button"></button>
+            <nav class="header__menu">
+                <ul class="header__menu-list list">
+                    <li class="header__menu-item">
+                        <a href="#coverings" class="header__link link">Покрытия и градиенты</a> <!-- href - якорная ссылка -->
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#bicycle-types" class="header__link link">Велосипеды</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#workouts" class="header__link link">Тренировки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="page__section lead container container_s_large">
+            <h1 class="lead__title">Шоссе, ТТ и Грэвел</h1>
+            <div class="lead__image">
+                <div class="lead__slide-image"></div>
+            </div>
+            <p class="lead__text text">
+                Триатлонные старты, горные серпантины или грейвел заезды 
+                по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться 
+                с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
+            </p>
+            <a href="" class="lead__link link">Подробнее</a>
+            <p class="lead__slide-image-description">Cannondale Systemsix</p>
+        </section>
+
+        <section class="page__section excerption container container_s_medium">
+            <img src="./images/excerption-image.jpg" alt="Дорога" class="excerption__image">
+            <blockquote class="excerption__quote text">
+                &laquo;Катайся много или мало, долго или коротко, как
+                хочешь&nbsp;&mdash; но&nbsp;катайся&raquo;
+            </blockquote>
+            <p class="excerption__description">
+                <span class="excerption__quote-author text">Эдди Меркс</span>
+                <span class="excerption__quote-subline text">Велогонщик</span>
+            </p>
+        </section>
+
+        <section class="page__section coverings container container_s_large" id="coverings">
+            <!-- слайдер с типами покрытий (заголовок, описание, две картинки, две кнопки) х3 -->
+        </section>
+
+        <section class="page__section bicycle-types container container_s_medium" id="bicycle-types">
+            <h2 class="bicycle-types__title">Велосипеды</h2>
+            <!-- 3 кнопки селектора, 3 карточки с названиями велосипедов -->
+        </section>
+
+        <section class="page__section workouts container container_s_medium" id="workouts">
+            <h2 class="workouts__title">Тренировки</h2>
+            <img src="./images/workouts-image.jpg" alt="Шоссе в лесу" class="workouts__image">
+            <p class="workouts__description text">
+                Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, 
+                а&nbsp;записать эти тренировки поможет приложение Strava, 
+                а&nbsp;также это приложение позволит построить тренировочный план.
+            </p>
+            <ul class="workouts__links list">
+                <li class="workouts__links-item">
+                    <a href="https://www.strava.com" target="_blank" class="workouts__link link">Strava</a>
+                </li>
+                <li class="workouts__links-item">
+                    <a href="https://www.komoot.com" target="_blank" class="workouts__link link">Komoot</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__block container container_s_small">
+            <div class="subscription">
+                <h3 class="subscription__title text">Подпишитесь на&nbsp;рассылку &mdash;</h3>
+                <form name="subscibe-form" action="#" method="POST" class="subscription__form">
+                    <input type="email" name="user-email" class="subscription__input">
+                    <input type="submit" name="subscibe-accept" class="subscription__button button" value="ok">
+                </form>
+            </div>
+            <div class="footer__line">
+                <p class="footer__copyright text">&copy;&nbsp;Road Club 2021</p>
+                <!-- чекбокс смены темы (dekstop) / логотип (mobile) -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+
+</body>
+</html>
