@@ -1,0 +1,11 @@
+.button_assignment_learn-more {
+    @include buttonDefaultStyles;
+    @include fontAttributes(14px, $buttonTextColor, 600, 18px);
+    letter-spacing: 1px;
+    background-color: $buttonBackgroundColor;
+    border-radius: 4px;
+    width: 180px;
+    overflow: hidden;
+    z-index: 1;
+}
+

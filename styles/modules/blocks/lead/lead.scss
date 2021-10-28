@@ -1,0 +1,94 @@
+.lead {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content 1fr;
+    gap: 50px 100px;
+    grid-template-areas: 
+        "title image"
+        "text image"
+        "button image"
+        ". image";
+    
+    &__image {
+        grid-area: image;
+        position: relative;
+        background-image: url(../images/lead-image-forestRoad.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include sizes(610px, 836px)
+    }
+
+    &__title {
+        grid-area: title;
+        width: 460px;
+        padding-top: 60px;
+        margin: 0;
+
+        @include fontAttributes(55px, $baseTextColor, 700, 60px);
+    }
+
+    &__text {
+        grid-area: text;
+        width: 460px;
+
+        @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+    }
+
+    &__button {
+        grid-area: button;
+        padding: 16px 10px;
+        
+    }
+
+    &__button::before {
+        @include sizes(100%, 100%);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient($buttonBackgroundColor, $buttonHoverColor);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        z-index: -1;
+        transition: background-size .7s linear;
+    }
+
+    &__button:hover::before {
+        background-size: 100% 100%;
+    }
+
+    &__slide-image {
+        @include sizes(440px, 300px);
+        background-color: $pageBackgroundColor;
+        background-image: url(../images/canondale-systemsix.png);
+        background-size: 340px;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+        border-radius: 20px;
+
+        position: sticky;
+        top: 370px;
+        margin-top: 370px;
+        margin-bottom: 79px;
+        transform: translateX(-200px);
+    }
+
+    &__slide-image-description {
+        margin-top: 117px;
+        position: relative;
+        @include fontAttributes(18px, $anotherTextColor, 400, 18px);
+    }
+
+    &__slide-image-description::after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 224px;
+        background-color: $lineColor;
+
+        @include sizes(132px, 2px);
+    }
+}

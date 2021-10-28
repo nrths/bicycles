@@ -4,6 +4,21 @@
 @import "./modules/variables.scss"; /* сначала переменные, функции, миксины, потом блоки, элементы, модификаторы*/
 @import "./modules/mixins.scss";
 @import "./modules/blocks/page/page.scss";
+
 @import "./modules/blocks/list/list.scss";
 @import "./modules/blocks/link/link.scss";
+@import "./modules/blocks/container/container.scss";
+@import "./modules/blocks/container/_s/container_s_small.scss";
+@import "./modules/blocks/container/_s/container_s_medium.scss";
+@import "./modules/blocks/container/_s/container_s_large.scss";
+
+@import "./modules/blocks/button/_assignment/button_assignment_learn-more.scss";
+@import "./modules/blocks/text/text.scss";
+
 @import "./modules/blocks/header/header.scss";
+
+@import "./modules/blocks/lead/lead.scss";
+
+@import "./modules/blocks/excerption/excerption.scss";
+
+@import "./modules/blocks/workouts/workouts.scss";

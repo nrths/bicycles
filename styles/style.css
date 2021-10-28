@@ -16,7 +16,71 @@
 }
 
 .link {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
+  text-align: center;
+  color: #151515;
+}
+
+.container {
+  min-width: 284px;
+  margin: 0 auto;
+}
+
+.container_s_medium {
+  padding: 60px 120px;
+}
+
+@media (max-width: 1080) {
+  .container_s_medium {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 768px) {
+  .container_s_medium {
+    margin: 0 80px;
+  }
+}
+@media (min-width: 320px) and (max-width: 560px) {
+  .container_s_medium {
+    margin: 0 18px;
+  }
+}
+.container_s_large {
+  max-width: 1440px;
+  padding: 20px 0 60px 120px;
+  margin: 0;
+}
+
+.button_assignment_learn-more {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 18px;
+  font-style: normal;
+  letter-spacing: 1px;
+  background-color: #24B47E;
+  border-radius: 4px;
+  width: 180px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  color: #222222;
+  margin: 0;
+}
+.text__opacity {
+  opacity: 0.7;
 }
 
 .header {
@@ -26,6 +90,7 @@
   left: 0;
   right: 0;
   z-index: 2;
+  background-color: #F4F4F4;
 }
 .header__container {
   padding: 28px 0;
@@ -49,7 +114,7 @@
 .header__menu-item {
   margin-right: 34px;
 }
-.header__mennu-item:last-of-type {
+.header__menu-item:last-of-type {
   margin-right: 0;
 }
 .header__link {
@@ -59,7 +124,215 @@
   color: #151515;
   font-weight: 500;
   line-height: 18px;
+  font-style: normal;
 }
 .header__link:hover {
   opacity: 0.6;
+}
+
+.lead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content 1fr;
+  grid-template-rows: min-content min-content min-content 1fr;
+  gap: 50px 100px;
+  grid-template-areas: "title image" "text image" "button image" ". image";
+}
+.lead__image {
+  grid-area: image;
+  position: relative;
+  background-image: url(../images/lead-image-forestRoad.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 610px;
+  height: 836px;
+}
+.lead__title {
+  grid-area: title;
+  width: 460px;
+  padding-top: 60px;
+  margin: 0;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 55px;
+  color: #151515;
+  font-weight: 700;
+  line-height: 60px;
+  font-style: normal;
+}
+.lead__text {
+  grid-area: text;
+  width: 460px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 28px;
+  font-style: normal;
+}
+.lead__button {
+  grid-area: button;
+  padding: 16px 10px;
+}
+.lead__button::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#24B47E, #319E75);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  z-index: -1;
+  transition: background-size 0.7s linear;
+}
+.lead__button:hover::before {
+  background-size: 100% 100%;
+}
+.lead__slide-image {
+  width: 440px;
+  height: 300px;
+  background-color: #F4F4F4;
+  background-image: url(../images/canondale-systemsix.png);
+  background-size: 340px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 370px;
+  margin-top: 370px;
+  margin-bottom: 79px;
+  transform: translateX(-200px);
+}
+.lead__slide-image-description {
+  margin-top: 117px;
+  position: relative;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 18px;
+  font-style: normal;
+}
+.lead__slide-image-description::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 224px;
+  background-color: #D7D4D4;
+  width: 132px;
+  height: 2px;
+}
+
+.excerption {
+  display: grid;
+  grid-template-rows: 1fr -webkit-min-content;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: 1fr 470px;
+  gap: 40px 80px;
+  grid-template-areas: "image quote" "image caption";
+}
+.excerption__image {
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  grid-area: image;
+}
+.excerption__quote {
+  width: 470px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 34px;
+  color: #151515;
+  font-weight: 600;
+  line-height: 44px;
+  font-style: normal;
+  letter-spacing: -0.5px;
+}
+.excerption__description {
+  grid-area: caption;
+  margin: 0;
+}
+.excerption__quote-author {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  color: #151515;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  padding-bottom: 6px;
+  display: block;
+}
+.excerption__quote-subline {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 28px;
+  font-style: normal;
+  display: block;
+}
+
+.workouts {
+  display: grid;
+  gap: 40px;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title image" "text image" "links image";
+  padding-top: 90px;
+}
+.workouts__title {
+  grid-area: title;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 55px;
+  color: #151515;
+  font-weight: 700;
+  line-height: 60px;
+  font-style: normal;
+  letter-spacing: -0.5px;
+  max-width: 460px;
+  margin: 0;
+}
+.workouts__description {
+  grid-area: text;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 400;
+  line-height: 28px;
+  font-style: normal;
+}
+.workouts__links {
+  grid-area: links;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.workouts__links-item {
+  margin-right: 30px;
+}
+.workouts__link {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  color: #151515;
+  font-weight: 600;
+  line-height: 28px;
+  font-style: normal;
+}
+.workouts__link:hover {
+  opacity: 0.75;
+}
+.workouts__image {
+  grid-area: image;
+  max-width: 580px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */

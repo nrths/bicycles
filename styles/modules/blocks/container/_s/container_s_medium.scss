@@ -1,0 +1,21 @@
+.container_s_medium {
+    padding: 60px 120px;
+}
+
+@media (max-width: 1080) {
+    .container_s_medium {
+        margin: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container_s_medium {
+        margin: 0 80px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 560px) {
+    .container_s_medium {
+        margin: 0 18px;
+    }
+}

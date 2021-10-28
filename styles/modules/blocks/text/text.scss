@@ -1,0 +1,10 @@
+.text {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    color: $anotherTextColor;
+    margin: 0;
+
+    &__opacity {
+        opacity: .7;
+    }
+}

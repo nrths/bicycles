@@ -1,9 +1,10 @@
-@mixin fontAttributes ($fam, $size, $color, $weight, $line-height) {
+@mixin fontAttributes ($size, $color, $weight, $line-height) {
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: $size;
     color: $color;
     font-weight: $weight;
-    line-height: $line-height;    
+    line-height: $line-height;
+    font-style: normal;    
 }
 
 @mixin flex ($direction, $justify, $align) {
@@ -11,4 +12,17 @@
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+@mixin sizes ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin buttonDefaultStyles {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }

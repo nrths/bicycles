@@ -1,0 +1,39 @@
+.excerption {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr 470px;
+    gap: 40px 80px;
+    grid-template-areas:
+    "image quote"
+    "image caption";
+
+
+    &__image {
+        @include sizes(100%, auto);
+        max-width: 650px;
+        object-fit: contain;
+        grid-area: image;
+    }
+
+    &__quote {
+        width: 470px;
+        @include fontAttributes(34px, $baseTextColor, 600, 44px);
+        letter-spacing: -.5px;
+    }
+
+    &__description {
+        grid-area: caption;
+        margin: 0;
+    }
+
+    &__quote-author {
+        @include fontAttributes(20px, $baseTextColor, 500, 32px);
+        padding-bottom: 6px;
+        display: block;
+    }
+
+    &__quote-subline {
+        @include fontAttributes(16px, $anotherTextColor, 400, 28px);
+        display: block;
+    }
+}
