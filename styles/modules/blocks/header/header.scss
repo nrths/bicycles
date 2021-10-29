@@ -9,7 +9,8 @@
     background-color: $pageBackgroundColor;
 
     &__container {
-        padding: 28px 0;
+        padding-top: 28px;
+        padding-bottom: 28px;
         @include flex(row, flex-end, flex-start);
     }
 

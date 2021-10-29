@@ -58,12 +58,70 @@
         </section>
 
         <section class="page__section coverings container container_s_large" id="coverings">
-            <!-- слайдер с типами покрытий (заголовок, описание, две картинки, две кнопки) х3 -->
+            <div class="coverings__slider">
+                <article class="article">
+                    <h2 class="article__title">Шоссе</h2>
+                    <p class="article__text text text__opacity">
+                        На&nbsp;шоссейном велосипеде можно ездить по&nbsp;асфальту на&nbsp;разных градиентах: 
+                        будь&nbsp;то горы или равнины. 
+                        Гонки проходят в&nbsp;командном пелотоне, 
+                        но&nbsp;тренироваться можно и&nbsp;самостоятельно.
+                    </p>
+                    <ul class="article__image-list list">
+                        <li class="article__image-list-item">
+                            <img src="./images/highway-1.jpg" alt="Шоссе в горах" class="article__image">
+                        </li>
+                        <li class="article__image-list-item">
+                            <img src="./images/highway-2.jpg" alt="Велосипедист в лесу" class="article__image">
+                        </li>
+                        <div class="article__badge-case article__badge-case_mode_highway"></div>
+                    </ul>
+                </article>
+                <article class="article">
+                    <h2 class="article__title">Грэвел</h2>
+                    <p class="article__text text text__opacity">
+                        Грэвел похож на&nbsp;шоссейный велосипед, 
+                        но&nbsp;конструкция рамы немного отличается, 
+                        и&nbsp;на&nbsp;нём стоят более широкие покрышки, 
+                        всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
+                    </p>
+                    <ul class="article__image-list list">
+                        <li class="article__image-list-item">
+                            <img src="./images/highway-2.jpg" alt="Шоссе в горах" class="article__image">
+                        </li>
+                        <li class="article__image-list-item">
+                            <img src="./images/gravel-2.jpg" alt="Велосипедист в лесу" class="article__image">
+                        </li>
+                        <div class="article__badge-case article__badge-case_mode_gravel"></div>
+                    </ul>
+                </article>
+                <article class="article">
+                    <h2 class="article__title">ТТ</h2>
+                    <p class="article__text text text__opacity">
+                        ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта, 
+                        гоняют на&nbsp;таком велике только по&nbsp;равнинному асфальту, 
+                        велики очень быстрые и&nbsp;аэродинамичные.
+                    </p>
+                    <ul class="article__image-list list">
+                        <li class="article__image-list-item">
+                            <img src="./images/gravel-2.jpg" alt="Шоссе в горах" class="article__image">
+                        </li>
+                        <li class="article__image-list-item">
+                            <img src="./images/tt-2.jpg" alt="Велосипедист в лесу" class="article__image">
+                        </li>
+                        <div class="article__badge-case article__badge-case_mode_tt"></div>
+                    </ul>
+                </article>
+            </div>
+            <div class="coverings__buttons-group">
+                <button class="coverings__button button button_assignment_prev" type="button"></button>
+                <button class="coverings__button button button_assignment_next" type="button"></button>
+            </div>
         </section>
 
         <section class="page__section bicycle-types container container_s_medium" id="bicycle-types">
             <h2 class="bicycle-types__title">Велосипеды</h2>
-            <!-- 3 кнопки селектора, 3 карточки с названиями велосипедов -->
+            <!-- 3 кнопки селектора, по 3 карточки с названиями велосипедов -->
         </section>
 
         <section class="page__section workouts container container_s_medium" id="workouts">
@@ -101,7 +159,26 @@
         </div>
     </footer>
 
-    <!-- scripts -->
+    <div class="popup">
+        <div class="popup__container">
+            <button class="button popup__close-button button_assignment_close" type="button" ></button>
+            <nav class="popup__menu">
+                <ul class="popup__menu-list list">
+                    <li class="popup__menu-item">
+                        <a href="#coverings" class="popup__link link">Покрытия и градиенты</a> 
+                    </li>
+                    <li class="popup__menu-item">
+                        <a href="#bicycle-types" class="popup__link link">Велосипеды</a>
+                    </li>
+                    <li class="popup__menu-item">
+                        <a href="#workouts" class="popup__link link">Тренировки</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="/scripts/slider.js"></script>
 
 </body>
 </html>

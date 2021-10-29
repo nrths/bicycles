@@ -1,0 +1,55 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .7s ease;
+
+    &_opened {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__container {
+        @include sizes(100%, auto);
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        justify-content: center;
+        justify-items: center;
+        padding: 74px 0 38px;
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    &__menu-list {
+        padding-top: 70px;
+        @include flex(column, center, center);
+      }
+    
+      &__menu-item {
+        margin-bottom: 32px;
+      }
+    
+      &__menu-item:last-of-type {
+        margin-bottom: 0;
+      }
+    
+      &__link {
+        @include fontAttributes(18px, $baseTextColor, 500, 18px);
+        text-align: center;
+      }
+    
+      &__link:hover {
+        opacity: 0.75;
+      }
+}

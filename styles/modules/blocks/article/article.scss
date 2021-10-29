@@ -1,0 +1,67 @@
+.article {
+    display: grid;
+    row-gap: 50px;
+    grid-template-areas: 
+    "title"
+    "text"
+    "images-list";
+    
+    &__title {
+        grid-area: title;
+        max-width: 460px;
+        @include fontAttributes(55px, $baseTextColor, 700, 60px);
+        letter-spacing: -.5px;
+        margin: 0;
+    }
+
+    &__text {
+        grid-area: text;
+        max-width: 460px;
+        @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+        padding-bottom: 30px;
+    }
+
+    &__image-list {
+        grid-area: images-list;
+        @include sizes(100%, auto);
+        @include flex(row, flex-start, stretch);
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image-list-item {
+        margin-right: 40px;
+        line-height: 0;
+    }
+
+    &__image-list-item:last-of-type {
+        margin-right: 0px;
+    }
+
+    &__image {
+        max-width: 650px;
+        object-fit: contain;
+    }
+
+    &__badge-case {
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        @include sizes(100px, 40px);
+        
+        &_mode {
+            &_highway {
+                background: 16px / 50px 16px no-repeat url(../images/highway-badge.svg), 
+                    no-repeat url(../images/badge-base.svg);
+            }
+            &_gravel {
+                background: 16px / 50px 16px no-repeat url(../images/gravel-badge.svg), 
+                    no-repeat url(../images/badge-base.svg);
+            }
+            &_tt {
+                background: 16px / 50px 16px no-repeat url(../images/tt-badge.svg), 
+                    no-repeat url(../images/badge-base.svg);
+            }
+        }
+    }
+}

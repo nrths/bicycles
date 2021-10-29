@@ -1,0 +1,10 @@
+.button_assignment_prev {
+    @include buttonDefaultStyles;
+    @include sizes(50px, 50px);
+    background-color: $sliderBtnColor;
+    background-image: url(../../images/slider-btn-icon-prev.svg);
+    background-size: 7px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+}
