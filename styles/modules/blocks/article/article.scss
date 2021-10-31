@@ -1,10 +1,25 @@
 .article {
     display: grid;
     row-gap: 50px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "title"
     "text"
     "images-list";
+    justify-items: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    @include sizes(100%, 100%);
+
+    @media (max-width: 700px) {
+        grid-template-areas:
+            "title"
+            "images-list"
+            "text";
+        row-gap: 40px;
+    }
     
     &__title {
         grid-area: title;
@@ -12,6 +27,13 @@
         @include fontAttributes(55px, $baseTextColor, 700, 60px);
         letter-spacing: -.5px;
         margin: 0;
+
+        @media (max-width: 480px) {
+            @include fontAttributes(32px, $baseTextColor, 700, 40px);
+            max-width: 284px;
+            border-top: 1px solid $borderColor;
+            padding-top: 20px;
+        }
     }
 
     &__text {
@@ -19,6 +41,12 @@
         max-width: 460px;
         @include fontAttributes(18px, $anotherTextColor, 400, 28px);
         padding-bottom: 30px;
+
+        @media (max-width: 480px) {
+            max-width: 284px;
+            @include fontAttributes(12px, $anotherTextColor, 400, 18px);
+            padding-bottom: 40px;
+        }
     }
 
     &__image-list {
@@ -32,6 +60,10 @@
     &__image-list-item {
         margin-right: 40px;
         line-height: 0;
+
+        @media (max-width: 480px) {
+            margin-right: 18px;
+        }
     }
 
     &__image-list-item:last-of-type {
@@ -41,6 +73,14 @@
     &__image {
         max-width: 650px;
         object-fit: contain;
+
+        /*@media (max-width: 700px) {
+            max-width: 580px;
+        }*/
+
+        @media (max-width: 480px) {
+            @include sizes(284px, 204px);
+        }
     }
 
     &__badge-case {
@@ -49,19 +89,39 @@
         bottom: 16px;
         @include sizes(100px, 40px);
         
+        @media (max-width: 480px) {
+            @include sizes(70px, 28px);
+            bottom: 14px;
+        }
+        
         &_mode {
             &_highway {
-                background: 16px / 50px 16px no-repeat url(../images/highway-badge.svg), 
+                background: 16px / 50px 16px no-repeat url(../images/highway-badge.svg),
                     no-repeat url(../images/badge-base.svg);
+                   
+                @media (max-width: 480px) {
+                    background: 8px / 35px 12px no-repeat url(../images/highway-badge.svg),
+                    left / contain no-repeat url(../images/badge-base.svg);
+                }
             }
             &_gravel {
                 background: 16px / 50px 16px no-repeat url(../images/gravel-badge.svg), 
                     no-repeat url(../images/badge-base.svg);
+                @media (max-width: 480px) {
+                    background: 8px / 35px 12px no-repeat url(../images/gravel-badge.svg),
+                    left / contain no-repeat url(../images/badge-base.svg);
+                }
             }
             &_tt {
                 background: 16px / 50px 16px no-repeat url(../images/tt-badge.svg), 
                     no-repeat url(../images/badge-base.svg);
+                @media (max-width: 480px) {
+                    background: 8px / 35px 12px no-repeat url(../images/highway-badge.svg),
+                    left / contain no-repeat url(../images/badge-base.svg);
+                }
             }
+
+            
         }
     }
 }

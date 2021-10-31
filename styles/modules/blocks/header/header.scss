@@ -16,10 +16,18 @@
 
     &__menu-button {
         display: none;
+
+        @media (max-width: 660px) {
+            display: block;
+        }
     }
 
     &__menu {
         display: block;
+
+        @media (max-width: 660px) {
+            display: none;
+        }
     }
 
     &__menu-list {

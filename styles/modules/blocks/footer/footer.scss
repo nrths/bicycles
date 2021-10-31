@@ -1,0 +1,14 @@
+.footer {
+    background-color: $footerBackgroundColor;
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    &__line {
+        @include flex(row, space-between, center);
+        padding-top: 100px;
+    }
+
+    &__copyright {
+        @include fontAttributes(14px, $copyrightColor, 600, 19.59px);
+    }
+}

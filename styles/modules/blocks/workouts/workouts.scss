@@ -7,7 +7,17 @@
     "title image"
     "text image"
     "links image";
-    padding-top: 90px;
+    padding-top: 150px;
+    padding-bottom: 120px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "title"
+        "image"
+        "text"
+        "links";
+    }
 
     &__title {
         grid-area: title;
@@ -15,11 +25,23 @@
         letter-spacing: -.5px;
         max-width: 460px;
         margin: 0;
+
+        @media (max-width: 480px) {
+            @include fontAttributes(32px, $baseTextColor, 700, 40px);
+            max-width: 284px;
+            border-top: 1px solid $borderColor;
+            padding-top: 20px;
+        }
     }
 
     &__description {
         grid-area: text;
         @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+
+        @media (max-width: 480px) {
+            @include fontAttributes(12px, $anotherTextColor, 400, 18px);
+            max-width: 284px;
+        }
     }
 
     &__links {
@@ -33,6 +55,10 @@
 
     &__link {
         @include fontAttributes(18px, $baseTextColor, 600, 28px);
+
+        @media (max-width: 480px) {
+            @include fontAttributes(14px, $baseTextColor, 600, 20px);
+        }
     }
 
     &__link:hover {
@@ -44,5 +70,10 @@
         max-width: 580px;
         @include sizes(100%, auto);
         object-fit: contain;
+
+        @media (max-width: 480px) {
+            @include sizes(284px, 204px);
+            object-fit: cover;
+        }
     }
 }

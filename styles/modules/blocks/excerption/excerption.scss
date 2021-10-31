@@ -9,18 +9,36 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "image"
+        "quote"
+        "caption";
+    }
 
     &__image {
         @include sizes(100%, auto);
         max-width: 650px;
         object-fit: contain;
         grid-area: image;
+
+        @media (max-width: 480px) {
+            @include sizes(284px, 204px);
+            border-top: 1px solid $borderColor;
+            padding-top: 20px;
+        }
     }
 
     &__quote {
         width: 470px;
         @include fontAttributes(34px, $baseTextColor, 600, 44px);
         letter-spacing: -.5px;
+
+        @media (max-width: 560px) {
+            width: 284px;
+            @include fontAttributes(23px, $baseTextColor, 600, 29px);
+        }
     }
 
     &__description {
@@ -32,10 +50,19 @@
         @include fontAttributes(20px, $baseTextColor, 500, 32px);
         padding-bottom: 6px;
         display: block;
+
+        @media (max-width: 560px) {
+            @include fontAttributes(14px, $baseTextColor, 500, 22px);
+            padding-bottom: 4px;
+        }
     }
 
     &__quote-subline {
         @include fontAttributes(16px, $anotherTextColor, 400, 28px);
         display: block;
+
+        @media (max-width: 560px) {
+            @include fontAttributes(10px, $baseTextColor, 400, 16px);
+        }
     }
 }

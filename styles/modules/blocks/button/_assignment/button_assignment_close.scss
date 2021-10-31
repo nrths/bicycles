@@ -1,4 +1,13 @@
 .button_assignment_close {
     @include buttonDefaultStyles;
-    
+    @include sizes(22px, 22px);
+    background: repeating-linear-gradient(to bottom, 
+                                            transparent, transparent 10px, 
+                                            $menuButtonsColor 10px, $menuButtonsColor 13px, 
+                                            transparent 13px, transparent 22px),
+                repeating-linear-gradient(to right,
+                                            transparent, transparent 10px, 
+                                            $menuButtonsColor 10px, $menuButtonsColor 13px, 
+                                            transparent 13px, transparent 22px);
+    transform: rotate(-45deg);
 }

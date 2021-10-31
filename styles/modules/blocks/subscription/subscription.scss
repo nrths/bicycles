@@ -1,0 +1,44 @@
+.subscription {
+
+    &__title {
+        @include fontAttributes(24px, $baseTextColor, 600, 32px);
+        max-width: 229px;
+        margin-bottom: 50px;
+    }
+
+    &__form {
+        max-width: 360px;
+        position: relative;
+    }
+
+    &__input {
+        cursor: pointer;
+        @include sizes(100%, 50px);
+        @include fontAttributes(13px, $anotherTextColor, 500, 27.98px);
+        box-sizing: border-box;
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        border-radius: 4px;
+        outline: none;
+        background-color: transparent;
+        padding: 11px 20px;
+    }
+
+    &__input:hover::placeholder {
+        color: $baseTextColor;
+    }
+
+    &__input:focus::placeholder {
+        opacity: 0;
+    }
+
+    &__button {
+        position: absolute;
+        top: 11px;
+        right: 22px;
+        visibility: hidden;
+    }
+
+    &__input:focus + &__button {
+        visibility: visible;
+    }
+}

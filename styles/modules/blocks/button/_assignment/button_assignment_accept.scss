@@ -1,0 +1,5 @@
+.button_assignment_accept {
+    @include buttonDefaultStyles;
+    @include fontAttributes(13px, $baseTextColor, 500, 27.98px);
+    text-align: right;
+}

@@ -7,8 +7,20 @@
         "title image"
         "text image"
         "button image"
-        ". image";
-    
+        "description image";
+
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "title"
+                "image"
+                "text"
+                "button";
+            
+            row-gap: 40px;
+        }
+
+          
     &__image {
         grid-area: image;
         position: relative;
@@ -16,29 +28,58 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        @include sizes(610px, 836px);
 
-        @include sizes(610px, 836px)
+        @media (max-width: 1300px) {
+            @include sizes(520px, 728px);
+        }
+
+        @media (max-width: 768px) {
+            @include sizes(480px, 672px);
+        }
+        
+        @media (max-width: 560px) {
+            @include sizes(254px, 348px);
+            margin-left: 30px;
+        }
+        
     }
+
+           
 
     &__title {
         grid-area: title;
         width: 460px;
         padding-top: 60px;
         margin: 0;
-
         @include fontAttributes(55px, $baseTextColor, 700, 60px);
+        letter-spacing: -.5px;
+
+        @media (max-width: 560px) {
+            padding-top: 20px;
+            width: 284px;
+            @include fontAttributes(32px, $baseTextColor, 700, 40px);
+        }
     }
 
     &__text {
         grid-area: text;
         width: 460px;
-
         @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+
+        @media (max-width: 560px) {
+            width: 284px;
+            @include fontAttributes(12px, $anotherTextColor, 400, 18px);
+        }
     }
 
     &__button {
         grid-area: button;
         padding: 16px 10px;
+
+        @media (max-width: 560px) {
+            padding: 14px 0px;
+        }
         
     }
 
@@ -74,12 +115,31 @@
         margin-top: 370px;
         margin-bottom: 79px;
         transform: translateX(-200px);
+
+        @media (max-width: 1080px) {
+            left: 230px;
+            @include sizes(380px, 260px);
+            background-size: 280px;
+        }
+        @media (max-width: 560px) {
+            position: absolute;
+            top: 151px;
+            left: 170px;
+            @include sizes(234px, 160px);
+            background-size: 180px;
+            margin-top: 0;
+        }
     }
 
     &__slide-image-description {
+        grid-area: description;
         margin-top: 117px;
         position: relative;
         @include fontAttributes(18px, $anotherTextColor, 400, 18px);
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
     &__slide-image-description::after {
@@ -91,4 +151,5 @@
 
         @include sizes(132px, 2px);
     }
+
 }

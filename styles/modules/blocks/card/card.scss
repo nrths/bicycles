@@ -1,0 +1,29 @@
+.card {
+    margin-right: 30px;
+    
+    
+    &__case {
+        max-width: 380px;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border-radius: 20px;
+        @include flex(column, flex-start, flex-start);
+    }
+
+    &__image {
+        max-width: 340px;
+        padding: 20px;
+        margin-bottom: 22px;
+        background-color: $pageBackgroundColor;
+        border-radius: 20px;
+    }
+
+    &__caption {
+        @include fontAttributes(18px, $baseTextColor, 600, 22px);
+    }
+}
+
+.card:last-of-type {
+    margin-right: 0px;
+}
