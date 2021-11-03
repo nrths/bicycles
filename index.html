@@ -36,7 +36,7 @@
             <div class="lead__image">
                 <div class="lead__slide-image"></div>
             </div>
-            <p class="lead__text text text__opacity">
+            <p class="lead__text text text_opacity">
                 Триатлонные старты, горные серпантины или грейвел заезды 
                 по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться 
                 с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
@@ -47,21 +47,21 @@
 
         <section class="page__section excerption container container_s_medium">
             <img src="./images/excerption-image.jpg" alt="Дорога" class="excerption__image">
-            <blockquote #F4F4F4; class="excerption__quote text">
+            <blockquote class="excerption__quote text">
                 &laquo;Катайся много или мало, долго или коротко, как
                 хочешь&nbsp;&mdash; но&nbsp;катайся&raquo;
             </blockquote>
             <p class="excerption__description">
                 <span class="excerption__quote-author text">Эдди Меркс</span>
-                <span class="excerption__quote-subline text text__opacity">Велогонщик</span>
+                <span class="excerption__quote-subline text text_opacity">Велогонщик</span>
             </p>
         </section>
 
-        <section class="page__section coverings container" id="coverings">
+        <section class="page__section coverings container container_s_large">
             <div class="coverings__slider">
                 <article class="article">
                     <h2 class="article__title">Шоссе</h2>
-                    <p class="article__text text text__opacity">
+                    <p class="article__text text text_opacity">
                         На&nbsp;шоссейном велосипеде можно ездить по&nbsp;асфальту на&nbsp;разных градиентах: 
                         будь&nbsp;то горы или равнины. 
                         Гонки проходят в&nbsp;командном пелотоне, 
@@ -74,12 +74,12 @@
                         <li class="article__image-list-item">
                             <img src="./images/highway-2.jpg" alt="Велосипедист в лесу" class="article__image">
                         </li>
-                        <div class="article__badge-case article__badge-case_mode_highway"></div>
+                        <li class="article__badge-case article__badge-case_mode_highway"></li>
                     </ul>
                 </article>
                 <article class="article">
                     <h2 class="article__title">Грэвел</h2>
-                    <p class="article__text text text__opacity">
+                    <p class="article__text text text_opacity">
                         Грэвел похож на&nbsp;шоссейный велосипед, 
                         но&nbsp;конструкция рамы немного отличается, 
                         и&nbsp;на&nbsp;нём стоят более широкие покрышки, 
@@ -92,12 +92,12 @@
                         <li class="article__image-list-item">
                             <img src="./images/gravel-2.jpg" alt="Велосипедист в лесу" class="article__image">
                         </li>
-                        <div class="article__badge-case article__badge-case_mode_gravel"></div>
+                        <li class="article__badge-case article__badge-case_mode_gravel"></li>
                     </ul>
                 </article>
                 <article class="article">
                     <h2 class="article__title">ТТ</h2>
-                    <p class="article__text text text__opacity">
+                    <p class="article__text text text_opacity">
                         ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта, 
                         гоняют на&nbsp;таком велике только по&nbsp;равнинному асфальту, 
                         велики очень быстрые и&nbsp;аэродинамичные.
@@ -109,8 +109,8 @@
                         <li class="article__image-list-item">
                             <img src="./images/tt-2.jpg" alt="Велосипедист в лесу" class="article__image">
                         </li>
-                        <div class="article__badge-case article__badge-case_mode_tt"></div>
-                    </ul>
+                        <li class="article__badge-case article__badge-case_mode_tt"></li>
+                    </ul>                   
                 </article>
             </div>
             <div class="coverings__buttons-group">
@@ -120,10 +120,13 @@
         </section>
 
         <section class="page__section bicycle-types container container_s_medium" id="bicycle-types">
-            
-            <select name="bicycles-types" id="bike-type" class="bicycle-types__selector"></select> <!-- only mobile -->
             <div class="bicycle-types__container">
                 <h2 class="bicycle-types__title">Велосипеды</h2>
+                <select name="bicycles-types" id="bike-type" class="bicycle-types__selector selector">
+                    <option class="selector__option text" value="value1" selected>Шоссе</option>
+                    <option class="selector__option text" value="value2">Грэвел</option>
+                    <option class="selector__option text" value="value3">ТТ</option>
+                </select> <!-- only mobile -->
                 <ul class="bicycle-types__links-list list">
                     <li class="bicycle-types__list-item">
                         <a href="#" class="bicycle-types__link bicycle-types__link_active link" data-tab="tab1">Шоссе</a>
@@ -140,7 +143,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" target="_blank" class="card__link link">
-                                    <img src="./images/highway/Cervelo Caledonia-5.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/highway/cervelo-caledonia-5.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Cervelo Caledonia 5</figcaption>
                             </figure>
@@ -148,7 +151,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" target="_blank" class="card__link link">
-                                    <img src="./images/highway/Cannondale Systemsix Himod.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/highway/cannondale-systemsix-himod.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Cannondale Systemsix Himod</figcaption>
                             </figure>
@@ -156,7 +159,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" target="_blank" class="card__link link">
-                                    <img src="./images/highway/Trek Domane SL-7.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/highway/trek-domane-sl-7.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Trek Domane SL-7</figcaption>
                             </figure>
@@ -168,7 +171,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE" target="_blank" class="card__link link">
-                                    <img src="./images/gravel/Cervelo Aspero GRX 810.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/gravel/cervelo-aspero-grx-810.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Cervelo Aspero GRX 810</figcaption>
                             </figure>
@@ -176,7 +179,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9" target="_blank" class="card__link link">
-                                    <img src="./images/gravel/Specialized S-Works Diverge.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/gravel/specialized-s-works-diverge.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Specialized S-Works Diverge</figcaption>
                             </figure>
@@ -184,7 +187,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8" target="_blank" class="card__link link">
-                                    <img src="./images/gravel/Cannondale Topstone Lefty 3.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/gravel/cannondale-topstone-lefty-3.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Cannondale Topstone Lefty 3</figcaption>
                             </figure>
@@ -196,7 +199,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9" target="_blank" class="card__link link">
-                                    <img src="./images/tt/Specialized S-Works Shiv.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/tt/specialized-s-works-shiv.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Specialized S-Works Shiv</figcaption>
                             </figure>
@@ -204,7 +207,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835" target="_blank" class="card__link link">
-                                    <img src="./images/tt/BMC Timemachine 01 ONE.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/tt/bmc-timemachine-01-one.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">BMC Timemachine 01 ONE</figcaption>
                             </figure>
@@ -212,7 +215,7 @@
                         <li class="cards__item card">
                             <figure class="card__case">
                                 <a href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q" target="_blank" class="card__link link">
-                                    <img src="./images/tt/Cervelo P-Series.png" alt="Велосипед" class="card__image">
+                                    <img src="./images/tt/cervelo-p-series.jpg" alt="Велосипед" class="card__image">
                                 </a>
                                 <figcaption class="card__caption text">Cervelo P-Series</figcaption>
                             </figure>
@@ -227,7 +230,7 @@
         <section class="page__section workouts container container_s_medium" id="workouts">
             <h2 class="workouts__title">Тренировки</h2>
             <img src="./images/workouts-image.jpg" alt="Шоссе в лесу" class="workouts__image">
-            <p class="workouts__description text text__opacity">
+            <p class="workouts__description text text_opacity">
                 Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, 
                 а&nbsp;записать эти тренировки поможет приложение Strava, 
                 а&nbsp;также это приложение позволит построить тренировочный план.
@@ -244,17 +247,21 @@
     </main>
 
     <footer class="footer">
-        <div class="footer__block container container_s_medium">
+        <div class="footer__block container container_s_small">
             <div class="subscription">
                 <h3 class="subscription__title text">Подпишитесь на&nbsp;рассылку &mdash;</h3>
                 <form name="subscibe-form" action="#" method="POST" class="subscription__form">
-                    <input type="email" name="email" class="subscription__input text text__opacity" placeholder="Ваш e-mail">
+                    <input type="email" name="email" class="subscription__input text text_opacity" placeholder="Ваш e-mail">
                     <input type="submit" name="subscibe-accept" class="subscription__button button button_assignment_accept" value="ok">
                 </form>
             </div>
             <div class="footer__line">
                 <p class="footer__copyright text">&copy;&nbsp;Road Club 2021</p>
-                <!-- чекбокс смены темы (dekstop) / логотип (mobile) -->
+                <img src="./images/logo.svg" class="footer__logo logo" alt="Логотип">
+                <label class="footer__toggler toggler">
+                    <input type="checkbox" class="toggler__input">
+                    <span class="toggler__slider"></span>
+                </label>
             </div>
         </div>
     </footer>
@@ -275,7 +282,10 @@
                     </li>
                 </ul>
             </nav>
-            <!-- чекбокс смены темы -->
+            <label class="popup__toggler toggler">
+                <input type="checkbox" class="toggler__input">
+                <span class="toggler__slider"></span>
+            </label>
         </div>
     </div>
 

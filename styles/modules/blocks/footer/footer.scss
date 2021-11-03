@@ -11,4 +11,20 @@
     &__copyright {
         @include fontAttributes(14px, $copyrightColor, 600, 19.59px);
     }
+
+    &__toggler {
+        margin-right: 42px;
+
+        @media (max-width: 660px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @media (max-width: 660px) {
+            display: block;
+        }
+    }
 }

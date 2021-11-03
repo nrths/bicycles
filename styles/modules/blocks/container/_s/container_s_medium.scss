@@ -1,17 +1,10 @@
 .container_s_medium {
-    padding: 0 120px;
-}
-
-@media (max-width: 1200px) {
-    .container_s_medium {
-        max-width: 1200px;
-    }
+    max-width: 1200px;
 }
 
 @media (max-width: 768px) {
     .container_s_medium {
         max-width: 768px;
-        padding: 20px 18px 40px;
     }
 }
 

@@ -11,10 +11,24 @@
             "title links-list"
             "cards cards";
         row-gap: 120px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "title"
+                "selector"
+                "cards"
+                "dots";
+        }
     }
 
     &__selector {
         display: none;
+
+        @media (max-width: 660px) {
+            grid-area: selector;
+            display: block;
+        }
     }
 
     &__title {
@@ -31,6 +45,10 @@
         top: 92px;
         right: 120px;
         @include flex(row, flex-start, stretch);
+
+        @media (max-width: 660px) {
+            display: none;
+        }
     }
 
     &__list-item {

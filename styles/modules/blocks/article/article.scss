@@ -98,7 +98,6 @@
             &_highway {
                 background: 16px / 50px 16px no-repeat url(../images/highway-badge.svg),
                     no-repeat url(../images/badge-base.svg);
-                   
                 @media (max-width: 480px) {
                     background: 8px / 35px 12px no-repeat url(../images/highway-badge.svg),
                     left / contain no-repeat url(../images/badge-base.svg);

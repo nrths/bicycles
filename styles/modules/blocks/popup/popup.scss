@@ -33,6 +33,11 @@
         right: 20px;
     }
 
+    &__close-button:hover {
+      transform: rotate(120deg);
+      transition: transform 2s linear 1s;
+    }
+
     &__menu-list {
         padding-top: 70px;
         @include flex(column, center, center);
