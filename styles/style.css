@@ -1018,6 +1018,7 @@
     border-radius: 2px;
     padding-left: 12px;
     cursor: pointer;
+    background-color: var(--page-background);
   }
   .bicycle-types__arrow::after {
     content: "";
@@ -1058,6 +1059,7 @@
     border: 1px solid var(--bikes-select-border-color);
     border-radius: 2px;
     margin-left: -12px;
+    background-color: var(--page-background);
   }
 }
 .bicycle-types__list-item:last-of-type {
