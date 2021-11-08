@@ -1,5 +1,5 @@
 .page {
-    background-color: $pageBackgroundColor;
+    background-color: var(--page-background);
     min-width: 320px;
     margin: 0 auto;
 }

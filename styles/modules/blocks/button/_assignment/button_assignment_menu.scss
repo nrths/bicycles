@@ -1,5 +1,5 @@
 .button_assignment_menu {
     @include buttonDefaultStyles;
     @include sizes(22px, 16px);
-    background: repeating-linear-gradient(to bottom, $menuButtonsColor, $menuButtonsColor 3px, transparent 3px, transparent 6px);
+    background: repeating-linear-gradient(to bottom, var(--buttons-color), var(--buttons-color) 3px, transparent 3px, transparent 6px);
 }

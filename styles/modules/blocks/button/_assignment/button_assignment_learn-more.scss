@@ -1,8 +1,8 @@
 .button_assignment_learn-more {
     @include buttonDefaultStyles;
-    @include fontAttributes(14px, $buttonTextColor, 600, 18px);
+    @include fontAttributes(14px, var(--learn-more-btn-color), 600, 18px);
     letter-spacing: 1px;
-    background-color: $buttonBackgroundColor;
+    background-color: var(--learn-more-btn-background);
     border-radius: 4px;
     width: 180px;
     overflow: hidden;
@@ -10,7 +10,7 @@
 
     @media (max-width: 560px) {
         width: 284px;
-        @include fontAttributes(13px, $buttonTextColor, 600, 19px);
+        @include fontAttributes(13px, var(--learn-more-btn-color), 600, 19px);
     }
 }
 

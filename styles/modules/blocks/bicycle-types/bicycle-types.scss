@@ -1,7 +1,10 @@
 .bicycle-types {
     filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 18px 60px 0;
+    
+    @media (max-width: 1400px) {
+        padding: 60px 18px;
+    }
 
     &__container {
         display: grid;
@@ -12,6 +15,9 @@
             "cards cards";
         row-gap: 120px;
 
+        @media (max-width: 1200px) {
+            row-gap: 60px;
+        }
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
             grid-template-areas: 
@@ -19,40 +25,90 @@
                 "selector"
                 "cards"
                 "dots";
-        }
-    }
-
-    &__selector {
-        display: none;
-
-        @media (max-width: 660px) {
-            grid-area: selector;
-            display: block;
+                row-gap: 20px;
         }
     }
 
     &__title {
         grid-area: title;
         max-width: 460px;
-        @include fontAttributes(55px, $baseTextColor, 700, 60px);
+        @include fontAttributes(55px, var(--text-color), 700, 60px);
         letter-spacing: -.5px;
         margin: 0;
+
+        @media (max-width: 768px) {
+            padding-left: 120px;
+        }
+
+        @media (max-width: 600px) {
+            padding-left: 0;
+            @include fontAttributes(32px, var(--text-color), 700, 40px);
+            max-width: 284px;
+            border-top: 1px solid var(--page-section-border-color);
+            padding-top: 20px;
+        }
+    }
+
+    &__menu {
+        @media (max-width: 768px) {
+            padding-left: 120px;
+            position: relative;
+            @include sizes(114px, 30px);
+            z-index: 3;
+        }
+
+        @media (max-width: 600px) {
+            padding-left: 0;
+        }
+    }
+
+    &__arrow {
+        visibility: hidden;
+        @media (max-width: 768px) {
+            visibility: visible;
+            grid-area: selector;
+            @include sizes(114px, 30px);
+            @include fontAttributes(11px, var(--text-color), 600, 14px);
+            @include flex(row, left, center);
+            box-sizing: border-box;
+            border: 1px solid var(--bikes-select-border-color);
+            border-radius: 2px;
+            padding-left: 12px;
+            cursor: pointer;
+
+        &::after {
+            content: "";
+            background-image: url(../images/select-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include sizes(4.5px, 10px);
+            margin: 12px 5px auto 42px;
+            }
+        }
+        
     }
 
     &__links-list {
         grid-area: links-list;
-        position: absolute;
-        top: 92px;
-        right: 120px;
-        @include flex(row, flex-start, stretch);
+        @include flex(row, flex-end, stretch);
 
-        @media (max-width: 660px) {
-            display: none;
+        @media (max-width: 768px) {
+            grid-area: selector;
+            @include sizes(114px, auto);
+            @include flex(column, space-between, flex-start);
+            padding-left: 12px;   
         }
     }
 
     &__list-item {
         margin-right: 40px;
+
+        @media (max-width: 768px) {
+            @include sizes(114px, 30px);
+            border: 1px solid var(--bikes-select-border-color);
+            border-radius: 2px;
+            margin-left: -12px;
+        }
       
     }
     &__list-item:last-of-type {
@@ -60,26 +116,38 @@
     }
 
     &__link {
-        @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+        @include fontAttributes(18px, var(--another-text-color), 400, 28px);
         text-align: right;
         opacity: .7;
 
+        @media (max-width: 768px) {
+            @include fontAttributes(11px, var(--another-text-color), 600, 14px);
+            text-align: left;
+            padding-left: 12px;
+            padding-top: 8px;
+        }
+
         &_active {
+            color: var(--links-color);
             font-weight: 600;
             opacity: 1;
         }
     }
 
     &__link:hover {
-        color: $anotherTextColor;
-        opacity: .7;
+        color: var(--another-text-color);
+        opacity: .6;
     }
 
     &__tabs {
         grid-area: cards;
         position: relative;
         overflow: hidden;
-        @include flex(row, flex-start, stretch);
+
+        @media (max-width: 768px) {
+            max-width: 284px;
+            margin: 0 auto;
+        }
     }
 
     &__cards-list {
@@ -87,8 +155,26 @@
 
         &_active {
             @include flex(row, flex-start, stretch);
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition-property: transform;
+            box-sizing: content-box;
+        }
+
+        @media (max-width: 768px) {
+            &_active {
+                max-height: 425px;
+                margin: 0 auto;
+                
+            }
         }
     }
-
+    &__pagination {
+        margin: 0 auto;
+        grid-area: dots;
+    }
+   
     
 }

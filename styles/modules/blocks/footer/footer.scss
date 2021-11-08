@@ -1,7 +1,14 @@
 .footer {
-    background-color: $footerBackgroundColor;
+    background-color: var(--footer-background);
     padding-top: 80px;
     padding-bottom: 60px;
+
+    @media (max-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 16px;
+        padding-right: 18px;
+        padding-left: 18px;
+    }
 
     &__line {
         @include flex(row, space-between, center);
@@ -9,7 +16,7 @@
     }
 
     &__copyright {
-        @include fontAttributes(14px, $copyrightColor, 600, 19.59px);
+        @include fontAttributes(14px, var(--copyright-color), 600, 19.59px);
     }
 
     &__toggler {

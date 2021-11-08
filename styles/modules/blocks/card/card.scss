@@ -1,26 +1,53 @@
 .card {
-    margin-right: 30px;
-    
-    
+    margin-right: 10px;
+    border-radius: 20px;
+        
+    @media (max-width: 1200px) {
+        margin-right: 0px;
+        margin-bottom: 36px;
+    }
+
     &__case {
         max-width: 380px;
-        padding: 0;
+        padding: 16px 0;
         margin: 0;
         background-color: transparent;
-        border-radius: 20px;
         @include flex(column, flex-start, flex-start);
+
+        @media (max-width: 768px) {
+            max-width: 284px;
+            padding: 0;
+            padding-bottom: 16px;
+            background-color: var(--card-background);
+            border-radius: 20px;
+        }
     }
 
     &__image {
         max-width: 340px;
         padding: 20px;
-        margin-bottom: 22px;
-        background-color: $pageBackgroundColor;
+        background-color: var(--card-background);
         border-radius: 20px;
+
+        @media (max-width: 788px) {
+            max-width: 254px;
+            object-fit: contain;
+            padding: 15px 15px 0;
+        }
     }
 
     &__caption {
-        @include fontAttributes(18px, $baseTextColor, 600, 22px);
+        @include fontAttributes(18px, var(--card-description-outside-color), 600, 22px);
+        padding-left: 6px;
+        padding-top: 22px;
+
+        @media (max-width: 768px) {
+            padding-top: 0;
+            padding-left: 0;
+            margin: 0 auto;
+            @include fontAttributes(14px, var(--card-description-inside-color), 600, 18px);
+            text-align: center;
+        }
     }
 }
 

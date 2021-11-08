@@ -1,7 +1,7 @@
 .subscription {
 
     &__title {
-        @include fontAttributes(24px, $baseTextColor, 600, 32px);
+        @include fontAttributes(24px, var(--heading-color), 600, 32px);
         max-width: 229px;
         margin-bottom: 50px;
     }
@@ -14,7 +14,7 @@
     &__input {
         cursor: pointer;
         @include sizes(100%, 50px);
-        @include fontAttributes(13px, $anotherTextColor, 500, 27.98px);
+        @include fontAttributes(13px, var(--subscription-input-placeholder-color), 500, 27.98px);
         box-sizing: border-box;
         border: 1px solid rgba(199, 199, 199, 0.5);
         border-radius: 4px;
@@ -24,7 +24,8 @@
     }
 
     &__input:hover::placeholder {
-        color: $baseTextColor;
+        color: var(--subscription-input-placeholder-hover-color);
+        opacity: 1;
     }
 
     &__input:focus::placeholder {
@@ -36,9 +37,12 @@
         top: 11px;
         right: 22px;
         visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.8s linear;
     }
 
     &__input:focus + &__button {
         visibility: visible;
+        opacity: 1;
     }
 }

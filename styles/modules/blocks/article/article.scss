@@ -12,26 +12,33 @@
     position: relative;
     flex-shrink: 0;
     @include sizes(100%, 100%);
+    
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         grid-template-areas:
             "title"
             "images-list"
             "text";
         row-gap: 40px;
+        padding-left: 64px;
+    }
+
+    @media (max-width: 660px) {
+        padding-left: 0;
+        border-top: 1px solid var(--page-section-border-color);
     }
     
     &__title {
         grid-area: title;
         max-width: 460px;
-        @include fontAttributes(55px, $baseTextColor, 700, 60px);
+        @include fontAttributes(55px, var(--text-color), 700, 60px);
         letter-spacing: -.5px;
         margin: 0;
 
-        @media (max-width: 480px) {
-            @include fontAttributes(32px, $baseTextColor, 700, 40px);
+        @media (max-width: 600px) {
+            @include fontAttributes(32px, var(--text-color), 700, 40px);
             max-width: 284px;
-            border-top: 1px solid $borderColor;
+            
             padding-top: 20px;
         }
     }
@@ -39,12 +46,12 @@
     &__text {
         grid-area: text;
         max-width: 460px;
-        @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+        @include fontAttributes(18px, var(--another-text-color), 400, 28px);
         padding-bottom: 30px;
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             max-width: 284px;
-            @include fontAttributes(12px, $anotherTextColor, 400, 18px);
+            @include fontAttributes(12px, var(--another-text-color), 400, 18px);
             padding-bottom: 40px;
         }
     }
@@ -61,8 +68,11 @@
         margin-right: 40px;
         line-height: 0;
 
-        @media (max-width: 480px) {
-            margin-right: 18px;
+        @media (max-width: 768px) {
+            margin-right: 140px;
+        }
+        @media (max-width: 600px) {
+            margin-right: 40px;
         }
     }
 
@@ -71,14 +81,16 @@
     }
 
     &__image {
-        max-width: 650px;
+        width: 650px;
+        height: 400px;
         object-fit: contain;
 
-        /*@media (max-width: 700px) {
-            max-width: 580px;
-        }*/
+        @media (max-width: 768px) {
+            width: 565px;
+            height: 357px;
+        }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             @include sizes(284px, 204px);
         }
     }
@@ -89,16 +101,16 @@
         bottom: 16px;
         @include sizes(100px, 40px);
         
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             @include sizes(70px, 28px);
-            bottom: 14px;
+            bottom: 29px;
         }
         
         &_mode {
             &_highway {
                 background: 16px / 50px 16px no-repeat url(../images/highway-badge.svg),
                     no-repeat url(../images/badge-base.svg);
-                @media (max-width: 480px) {
+                @media (max-width: 600px) {
                     background: 8px / 35px 12px no-repeat url(../images/highway-badge.svg),
                     left / contain no-repeat url(../images/badge-base.svg);
                 }
@@ -106,7 +118,7 @@
             &_gravel {
                 background: 16px / 50px 16px no-repeat url(../images/gravel-badge.svg), 
                     no-repeat url(../images/badge-base.svg);
-                @media (max-width: 480px) {
+                @media (max-width: 600px) {
                     background: 8px / 35px 12px no-repeat url(../images/gravel-badge.svg),
                     left / contain no-repeat url(../images/badge-base.svg);
                 }
@@ -114,7 +126,7 @@
             &_tt {
                 background: 16px / 50px 16px no-repeat url(../images/tt-badge.svg), 
                     no-repeat url(../images/badge-base.svg);
-                @media (max-width: 480px) {
+                @media (max-width: 600px) {
                     background: 8px / 35px 12px no-repeat url(../images/highway-badge.svg),
                     left / contain no-repeat url(../images/badge-base.svg);
                 }

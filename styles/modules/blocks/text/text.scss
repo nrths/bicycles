@@ -1,7 +1,7 @@
 .text {
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
-    color: $anotherTextColor;
+    color: var(--another-text-color);
     margin: 0;
 
     &_opacity {

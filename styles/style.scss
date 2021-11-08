@@ -1,7 +1,7 @@
 @import url("./vendor/normalize.css");
 @import url("./vendor/fonts.css");
 
-@import "./modules/variables.scss"; /* сначала переменные, функции, миксины, потом блоки, элементы, модификаторы*/
+@import "./modules/blocks/themes/themes.scss"; 
 @import "./modules/mixins.scss";
 @import "./modules/blocks/page/page.scss";
 
@@ -31,8 +31,11 @@
 @import "./modules/blocks/article/article.scss";
 
 @import "./modules/blocks/bicycle-types/bicycle-types.scss";
-@import "./modules/blocks/selector/selector.scss";
+@import "./modules/blocks/hidden/hidden.scss";
+@import "./modules/blocks/visible/visible.scss";
+@import "./modules/blocks/overflow/overflow.scss";
 @import "./modules/blocks/card/card.scss";
+@import "./modules/blocks/swiper/swiper.scss";
 
 @import "./modules/blocks/workouts/workouts.scss";
 

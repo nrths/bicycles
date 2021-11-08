@@ -1,8 +1,8 @@
 .button_assignment_next {
     @include buttonDefaultStyles;
     @include sizes(50px, 50px);
-    background-color: $sliderBtnColor;
-    background-image: url("../images/slider-btn-icon-next.svg");
+    background-color: var(--prev-next-btn-background);
+    background-image: var(--next-btn-icon);
     background-size: 7px 16px;
     background-repeat: no-repeat;
     background-position: center;
