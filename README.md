@@ -7,7 +7,7 @@
 
 * Figma
 * Используемые технологии
-* GitHub Pages
+
 
 **Figma**
 
@@ -23,4 +23,4 @@
 * SCSS
 * Java Script (ECMA2015) 
 
-__[GitHubPages]()__ 
+
