@@ -13,6 +13,7 @@
     &_opened {
         visibility: visible;
         opacity: 1;
+        z-index: 3;
     }
 
     &__container {
@@ -23,12 +24,18 @@
         justify-content: center;
         justify-items: center;
         padding: 74px 0 38px;
+        background-color: var(--popup-menu-background);
     }
 
     &__close-button {
         position: absolute;
         top: 30px;
         right: 20px;
+    }
+
+    &__close-button:hover {
+      transform: rotate(120deg);
+      transition: transform 2s linear 1s;
     }
 
     &__menu-list {
@@ -45,7 +52,7 @@
       }
     
       &__link {
-        @include fontAttributes(18px, $baseTextColor, 500, 18px);
+        @include fontAttributes(18px, var(--links-color), 500, 18px);
         text-align: center;
       }
     

@@ -1,21 +1,17 @@
 .container_s_medium {
-    padding: 0 120px;
+    max-width: 1200px;
 }
 
-@media (max-width: 1080) {
+@media (max-width: 1200px) {
     .container_s_medium {
-        margin: 0 100px;
+        max-width: 768px;
+        padding: 0 36px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container_s_medium {
-        margin: 0 80px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 560px) {
-    .container_s_medium {
-        margin: 0 18px;
+        max-width: 320px;
+        padding: 0 18px;
     }
 }

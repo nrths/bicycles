@@ -7,8 +7,27 @@
         "title image"
         "text image"
         "button image"
-        ". image";
-    
+        "description image";
+        padding-left: 120px;
+
+        @media (max-width: 1280px) {
+            padding-left: 64px;
+        }
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "title"
+                "image"
+                "text"
+                "button";
+            
+            row-gap: 40px;
+        }
+
+        @media (max-width: 600px) {
+            padding-left: 18px;
+        }
+          
     &__image {
         grid-area: image;
         position: relative;
@@ -16,29 +35,65 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        @include sizes(610px, 836px);
 
-        @include sizes(610px, 836px)
+        @media (max-width: 1300px) {
+            @include sizes(520px, 728px);
+        }
+
+        @media (max-width: 768px) {
+            @include sizes(420px, 588px);
+        }
+        
+        @media (max-width: 600px) {
+            @include sizes(254px, 348px);
+            margin: 0 auto;
+        }
+
+        @media (max-width: 400px) {
+            margin-left: 30px;
+        }
+        
     }
+
+           
 
     &__title {
         grid-area: title;
         width: 460px;
         padding-top: 60px;
         margin: 0;
+        @include fontAttributes(55px, var(--heading-color), 700, 60px);
+        letter-spacing: -.5px;
 
-        @include fontAttributes(55px, $baseTextColor, 700, 60px);
+        @media (max-width: 600px) {
+            padding-top: 20px;
+            width: 284px;
+            margin: 0 auto;
+            @include fontAttributes(32px, var(--heading-color), 700, 40px);
+        }
     }
 
     &__text {
         grid-area: text;
         width: 460px;
+        @include fontAttributes(18px, var(--another-text-color), 400, 28px);
 
-        @include fontAttributes(18px, $anotherTextColor, 400, 28px);
+        @media (max-width: 600px) {
+            width: 284px;
+            margin: 0 auto;
+            @include fontAttributes(12px, var(--another-text-color), 400, 18px);
+        }
     }
 
     &__button {
         grid-area: button;
         padding: 16px 10px;
+
+        @media (max-width: 600px) {
+            padding: 14px 0px;
+            margin: 0 auto;
+        }
         
     }
 
@@ -48,7 +103,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: linear-gradient($buttonBackgroundColor, $buttonHoverColor);
+        background-image: linear-gradient(var(--learn-more-btn-background), var(--learn-more-btn-hover-background));
         background-repeat: no-repeat;
         background-size: 0% 100%;
         z-index: -1;
@@ -61,7 +116,7 @@
 
     &__slide-image {
         @include sizes(440px, 300px);
-        background-color: $pageBackgroundColor;
+        background-color: var(--card-background);
         background-image: url(../images/canondale-systemsix.png);
         background-size: 340px;
         background-position: center;
@@ -74,12 +129,31 @@
         margin-top: 370px;
         margin-bottom: 79px;
         transform: translateX(-200px);
+
+        @media (max-width: 1200px) {
+            left: 400px;
+            @include sizes(380px, 260px);
+            background-size: 280px;
+        }
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 151px;
+            left: 170px;
+            @include sizes(234px, 160px);
+            background-size: 180px;
+            margin-top: 0;
+        }
     }
 
     &__slide-image-description {
+        grid-area: description;
         margin-top: 117px;
         position: relative;
-        @include fontAttributes(18px, $anotherTextColor, 400, 18px);
+        @include fontAttributes(18px, var(--another-text-color), 400, 18px);
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
     }
 
     &__slide-image-description::after {
@@ -87,8 +161,9 @@
         position: absolute;
         top: 9px;
         left: 224px;
-        background-color: $lineColor;
+        background-color: var(--card-description-line-color);
 
         @include sizes(132px, 2px);
     }
+
 }

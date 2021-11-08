@@ -3,23 +3,55 @@
     box-sizing: border-box;
     overflow: hidden;
     padding-top: 60px;
+    padding-bottom: 100px;
+    padding-left: 0;
 
+    @media (max-width: 768px) {
+        padding: 40px 18px;
+    }
     &__slider {
         display: flex;
         transition: .2s;
         padding-bottom: 100px;
+        position: relative;
+        z-index: 1;
+        box-sizing: content-box;
+        padding-left: 120px;
+
+        @media (max-width: 1200px) {
+            padding-left: 0;
+            padding-bottom: 0;
+        }        
     }
 
     &__buttons-group {
         position: absolute;
         top: unset;
-        left: 120px;
-        bottom: 60px;
+        bottom: 0px;
         z-index: 2;
+
+        @media (max-width: 1200px) {
+            bottom: -80px;
+        }
+
+        @media (max-width: 768px) {
+            top: 15px;
+            right: 100px;
+        }
+
+        @media (max-width: 600px) {
+            top: 30px;
+            right: 0;
+            
+        }
     }
 
     &__button:first-child {
         margin-right: 20px;
+
+        @media (max-width: 400px) {
+            margin-right: 10px;
+        }
     }
 
     &__button:hover {

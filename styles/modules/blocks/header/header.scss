@@ -6,20 +6,37 @@
     left: 0;
     right: 0;
     z-index: 2;
-    background-color: $pageBackgroundColor;
+    background-color: var(--header-background);
 
     &__container {
         padding-top: 28px;
         padding-bottom: 28px;
         @include flex(row, flex-end, flex-start);
+
+        @media (max-width: 660px) {
+            padding-bottom: 18px;
+        }
     }
 
     &__menu-button {
         display: none;
+
+        @media (max-width: 660px) {
+            display: block;
+        }
+    }
+
+    &__menu-button:hover {
+        transform: scale(1.2);
+        transition: transform 0.4s ease-in;
     }
 
     &__menu {
         display: block;
+
+        @media (max-width: 660px) {
+            display: none;
+        }
     }
 
     &__menu-list {
@@ -36,7 +53,7 @@
 
     &__link {
         text-align: right;
-        @include fontAttributes(14px, $baseTextColor, 500, 18px)
+        @include fontAttributes(14px, var(--text-color), 500, 18px)
     }
 
     &__link:hover {
