@@ -59,8 +59,6 @@ closeSelectMenu()}));
 
 const bikesSlider = new Swiper(".bicycle-types__tabs", {
   slidesPerView: 1,
-  //spaceBetween: 10,
-  //loop: true,
   observer: true,
   observeParents: true,
   observeSlideChildren: true,
@@ -77,7 +75,6 @@ const bikesSlider = new Swiper(".bicycle-types__tabs", {
     },
     1201: {
       slidesPerView: 3,
-      //spaceBetween: 30,
     },
   },
 });
